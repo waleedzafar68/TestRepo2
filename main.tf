@@ -60,7 +60,7 @@ resource "azurerm_virtual_machine" "example" {
   name                  = "vM1"
   location              = azurerm_resource_group.example.location
   resource_group_name   = azurerm_resource_group.example.name
-  network_interface_id  = azurerm_network_interface.example.id
+  network_interface_ids  = azurerm_network_interface.example.id
   vm_size               = "Standard_B2s"
   delete_os_disk_on_termination = true
 
