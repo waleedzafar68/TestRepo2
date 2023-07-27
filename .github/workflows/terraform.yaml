@@ -21,7 +21,7 @@ jobs:
       - name: Terraform Init
         shell: bash
         run: |
-          terraform apply --var="admin_password":"test12345"
+          terraform apply --var="admin_password"="test12345"
 
 
 
