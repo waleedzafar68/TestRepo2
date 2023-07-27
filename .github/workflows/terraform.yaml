@@ -1,0 +1,20 @@
+name: Terraform Init
+
+on: 
+  push:
+    branches: 
+      - master
+jobs:
+  Terraform-Init:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Terraform Install
+        uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.5.3
+      - name: Terraform Init
+        shell: bash 
+        run: |
+          terraform init
